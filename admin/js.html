@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="../js/jquery-3.1.1.min.js">
+</script>
+</head>
+<body>
+<h1>Jquery Experiments</h1>
+<ul id="theList">
+	<li><a id="exLink" class="link" href="www.google.com">here's 1</a></li>
+	<li>here's 2</li>
+	<li>one more thing</li>
+	<li>last one (maybe)</li>
+</ul>
+<script type="text/javascript">
+$(document).ready(function(){
+	alert("ready");
+	alert($("#exLink").attr("href"));
+	$("#exLink").attr("href", "www.changedlink.com");
+	alert($("#exLink").attr("href"));
+$("#theList").append("<li>An Extra Item</li>");
+$("#theList li").each(function(){
+	alert($(this.text));
+
+//var existingText = $(this).text().substr(7,1);
+//$(this).text("Item " + existingText);
+
+
+})
+});
+</script>
+</body>
+</html>
